@@ -43,7 +43,8 @@
                         <barButtonItem key="backBarButtonItem" title="戻る" id="JS4-AA-50f"/>
                     </navigationItem>
                     <connections>
-                        <segue destination="R57-8Z-zPc" kind="show" id="oRT-9z-Nnx"/>
+                        <outlet property="tableView" destination="ND8-TJ-YXr" id="zCd-WI-2US"/>
+                        <segue destination="R57-8Z-zPc" kind="show" identifier="next" id="oRT-9z-Nnx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
