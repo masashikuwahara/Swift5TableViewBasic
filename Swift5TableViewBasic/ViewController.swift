@@ -71,7 +71,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         textField.text = ""
         tableView.reloadData()
         
-//        return true
+        return true
     }
     
 }
