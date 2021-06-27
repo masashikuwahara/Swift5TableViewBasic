@@ -46,7 +46,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         
         cell.textLabel?.text = textArray[indexPath.row]
-        cell.imageView!.image = UIImage(named:"checkedImage")
+        cell.imageView!.image = UIImage(named: "checkImage")
         
         return cell
         
@@ -54,6 +54,13 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+        //タップしたときにその配列の番号の中身を取り出して、値を渡す
+        let nextVC = storyboard?.instantiateViewController(identifier: "next") as! NextViewController
+        
+        nextVC.toDoString = textArray[indexPath.row]
+        
+        
+        navigationController?.pushViewController(nextVC, animated: true)
         
         
     }
